@@ -10,8 +10,7 @@ TThe pdfs may already be present in the folder where you leave the script, other
 Once launched, the script will ask you:
 1. file name
 2. file title
-3. if the pdfs are already in the current folder or if you want to download them from the internet
-	* in the second case it will ask you for a url, the link of the site where they are located
+3. if the pdfs are already in the current folder or if you want to download them from the internet; in the second case it will ask you for a url, the link of the site where they are located
 4. if you want to include all pdfs or select "by hand" which ones to include and which not
 
 ## Instructions for execution
@@ -41,7 +40,7 @@ to run the script.
 ## Result
 
 ![result](s1.png)
-Text: various pdfs of exams, downloaded form Beep.
+Text: various pdfs of exams, downloaded from Beep.
 ![result](s2.png)
 Text: exectution of the script.
 ![result](s3.png)
