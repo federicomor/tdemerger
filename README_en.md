@@ -5,7 +5,14 @@ Script that merges exams/lecture notes/exercises in a single and indexed pdf.
 That is, the script creates a single pdf which, thanks to LaTex, is divided into chapters (with clickable links) which correspond to the individual initial pdfs.
 So you have everything in one sorted file and avoid having to jump between too many different files.
 
-The pdfs may already be present in the folder where you leave the script, otherwise you can also provide the link where they are located and the script will download them by itself.
+TThe pdfs may already be present in the folder where you leave the script, otherwise you can also provide the link of the site where they are located and the script will download them by itself.
+
+Once launched, the script will ask you:
+1. file name
+2. file title
+3. if the pdfs are already in the current folder or if you want to download them from the internet
+	* in the second case it will ask you for a url, the link of the site where they are located
+4. if you want to include all pdfs or select "by hand" which ones to include and which not
 
 ## Instructions for execution
 
