@@ -1,4 +1,4 @@
-# Breve descrizione
+# Descrizione
 
 Script che unisce temi d'esame/dispense/esercitazioni in un unico pdf indicizzato.
 

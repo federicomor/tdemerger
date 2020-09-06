@@ -1,4 +1,4 @@
-# Short description
+# Description
 
 Script that merges exams/lecture notes/exercises in a single and indexed pdf.
 
