@@ -2,6 +2,11 @@
 
 Script che unisce temi d'esame/dispense/esercitazioni in un unico pdf indicizzato.
 
+Cioè lo script crea un unico pdf che, grazie a LaTex, è diviso in capitoli (con dei collegamenti cliccabili) che corrispondono ai singoli pdf iniziali.
+Cosi' si ha tutto in un solo file ordinato e si evita di dover balzare tra troppi file diversi.
+
+I pdf possono essere già presenti nella cartella in cui si lacia lo script, altrimenti si può anche fornire il link in cui si trovano e lo script provvederà a scaricarli da solo.
+
 ## Istruzioni per l'esecuzione
 
 **Requisiti**: aver installato pdflatex (cioè aver installato TexStudio o un programma simile sul vostro pc)
