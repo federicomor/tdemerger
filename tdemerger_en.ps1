@@ -60,15 +60,17 @@ $pre = "\documentclass[a4paper,openany,12pt]{article}
 $pre | Add-Content tde.tex
 
 # Rimozione caratteri "scomodi" per latex, per sicurezza
-gci *.pdf | Rename-Item -NewName {$_ -replace '_', ' '}
-gci *.pdf | Rename-Item -NewName {$_ -replace '-', ' '}
-gci *.pdf | Rename-Item -NewName {$_ -replace 'à', 'a'}
-gci *.pdf | Rename-Item -NewName {$_ -replace '(è|é)', 'e'}
-gci *.pdf | Rename-Item -NewName {$_ -replace 'ì', 'i'}
-gci *.pdf | Rename-Item -NewName {$_ -replace 'ò', 'o'}
-gci *.pdf | Rename-Item -NewName {$_ -replace 'ù', 'u'}
-gci *.pdf | Rename-Item -NewName {$_ -replace '%', ' '}
-gci *.pdf | Rename-Item -NewName {$_ -replace '\+', ' '}
+gci *.pdf | Rename-Item -NewName {$_.Name -replace '_+', ' '}
+gci *.pdf | Rename-Item -NewName {$_.Name -replace '-+', ' '}
+gci *.pdf | Rename-Item -NewName {$_.Name -replace 'à', 'a'}
+gci *.pdf | Rename-Item -NewName {$_.Name -replace '(è|é)', 'e'}
+gci *.pdf | Rename-Item -NewName {$_.Name -replace 'ì', 'i'}
+gci *.pdf | Rename-Item -NewName {$_.Name -replace 'ò', 'o'}
+gci *.pdf | Rename-Item -NewName {$_.Name -replace 'ù', 'u'}
+gci *.pdf | Rename-Item -NewName {$_.Name -replace '%+', ' '}
+gci *.pdf | Rename-Item -NewName {$_.Name -replace '\++', ' '}
+gci *.pdf | Rename-Item -NewName {$_.Name -replace ' +', ' '}
+
 
 Write-Host ""
 $risp = Read-Host -Prompt "Do you want to include into $name.pdf all the pdfs you have in this folder, or do you prefer to select only some of them? (all/a/select/s) "
