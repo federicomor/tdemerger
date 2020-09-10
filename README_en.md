@@ -4,8 +4,7 @@ Script that merges exams/lecture notes/exercises in a single and indexed pdf.
 
 That is, the script creates a single pdf which, thanks to LaTex, is divided into chapters (with clickable links) which correspond to the individual initial pdfs.
 So you have everything in one sorted file and avoid having to jump between too many different files.
-
-TThe pdfs may already be present in the folder where you leave the script, otherwise you can also provide the link of the site where they are located and the script will download them by itself.
+The pdfs may already be present in the folder where you leave the script, otherwise you can also provide the link of the site where they are located and the script will try to download them by itself.
 
 Once launched, the script will ask you:
 1. file name
@@ -13,17 +12,19 @@ Once launched, the script will ask you:
 3. if the pdfs are already in the current folder or if you want to download them from the internet; in the second case it will ask you for a url, the link of the site where they are located
 4. if you want to include all pdfs or select "by hand" which ones to include and which not
 
-## Instructions for execution
+### Requirements
 
-**Requirements**: have installed pdflatex (i.e. have installed TexStudio or a similar software on your pc)
+Have installed pdflatex (i.e. have installed TexStudio or a similar software on your pc).
 
-**Instructions**:
+### Tips for PowerShell
+
+Try hitting Tab as you type, it will auto-complete your words. And to copy/paste things use Ctrl+Shift+C/V.
+
+### Instructions
 
 1. Download the file *tdemerger_en.ps1* and put it in the folder where there are the pdfs to be merged.
 
 2. Open Windows PowerShell by searching Powershell in the Windows menu, or the Windows Terminal (also looking for it from the Windows menu).
-
-General tip: try hitting Tab as you type, it will auto-complete your words.
 
 3. Move to the folder where you want to merge the pdf, with the command:
 ```
@@ -37,7 +38,7 @@ Powershell.exe -executionpolicy remotesigned -File .\tdemerger.ps1
 ```
 to run the script.
 
-## Result
+### Result
 
 ![result](s1.png)
 Text: various pdfs of exams, downloaded from Beep.
