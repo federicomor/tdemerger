@@ -29,6 +29,7 @@ if ( $risp -eq "no" -Or $risp -eq "n"){
 	# https://staff.polito.it/sergio.lancelotti/didattica/analisi2_new/analisi2_new_temi.html
 	# https://staff.polito.it/sergio.lancelotti/didattica/analisi2_new/analisi2_new_temi_aa16-17.html
 	# https://people.unica.it/alessiofilippetti/didattica/materiale-didattico/archivio-prove-desame-fisica-2/
+	
 	try {
 		echo "Attempt 1: "
 		$psPage = Invoke-WebRequest $url
@@ -36,7 +37,8 @@ if ( $risp -eq "no" -Or $risp -eq "n"){
 		$urls | ForEach-Object {Invoke-WebRequest -Uri $_ -OutFile ($_ | Split-Path -Leaf)}
 	}
 	catch{
-		"failed"
+		Write-Host "An error occurred:"
+		Write-Host $_
 	}
 	try {
 		echo "Attempt 2: "
@@ -48,7 +50,8 @@ if ( $risp -eq "no" -Or $risp -eq "n"){
 		# $urls | ForEach-Object {echo "$url_pre$_" }
 	}
 	catch{
-		"failed"
+		Write-Host "An error occurred:"
+		Write-Host $_
 	}
 }
 
