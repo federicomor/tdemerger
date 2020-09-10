@@ -26,11 +26,30 @@ if ( $risp -eq "no" -Or $risp -eq "n"){
 	$url = Read-Host -Prompt "Url to download them? "
 
 	# Url d'esempio/test
+	# https://staff.polito.it/sergio.lancelotti/didattica/analisi2_new/analisi2_new_temi.html
+	# https://staff.polito.it/sergio.lancelotti/didattica/analisi2_new/analisi2_new_temi_aa16-17.html
 	# https://people.unica.it/alessiofilippetti/didattica/materiale-didattico/archivio-prove-desame-fisica-2/
-
-	$psPage = Invoke-WebRequest $url
-	$urls = $psPage.ParsedHtml.getElementsByTagName("A") | ? {$_.href -like "*.pdf"} | Select-Object -ExpandProperty href
-	$urls | ForEach-Object {Invoke-WebRequest -Uri $_ -OutFile ($_ | Split-Path -Leaf)}
+	try {
+		echo "Attempt 1: "
+		$psPage = Invoke-WebRequest $url
+		$urls = $psPage.ParsedHtml.getElementsByTagName("A") | ? {$_.href -like "*.pdf"} | Select-Object -ExpandProperty href
+		$urls | ForEach-Object {Invoke-WebRequest -Uri $_ -OutFile ($_ | Split-Path -Leaf)}
+	}
+	catch{
+		"failed"
+	}
+	try {
+		echo "Attempt 2: "
+		$r1 = $psPage = Invoke-WebRequest $url 
+		$urls = $r1.Links | Where-Object {$_.href -like "*.pdf"} | Select-Object -ExpandProperty href
+		$url_pre = $url -replace "[a-z0-9-_]*\.[a-z]*$",""
+		# $url_suff = $urls -replace "^[a-z0-9-_]*\/",""
+		$urls | ForEach-Object {Invoke-WebRequest -Uri "$url_pre$_" -OutFile ($_ | Split-Path -Leaf)}
+		# $urls | ForEach-Object {echo "$url_pre$_" }
+	}
+	catch{
+		"failed"
+	}
 }
 
 # Out-Null per sopprimere l'output
