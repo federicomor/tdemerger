@@ -84,7 +84,7 @@ $pre | Add-Content tde.tex
 
 # Rimozione caratteri "scomodi" per latex, per sicurezza
 gci *.pdf | Rename-Item -NewName {$_.Name -replace '_+', ' '}
-gci *.pdf | Rename-Item -NewName {$_.Name -replace '-+', ' '}
+gci *.pdf | Rename-Item -NewName {$_.Name -replace '-+', '-'}
 gci *.pdf | Rename-Item -NewName {$_.Name -replace 'à', 'a'}
 gci *.pdf | Rename-Item -NewName {$_.Name -replace '(è|é)', 'e'}
 gci *.pdf | Rename-Item -NewName {$_.Name -replace 'ì', 'i'}
