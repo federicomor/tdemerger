@@ -1,6 +1,6 @@
 # Descrizione
 
-Script che unisce temi d'esame/dispense/esercitazioni in un unico pdf indicizzato.
+Script che unisce temi d'esame/dispense/esercitazioni in un unico pdf indicizzato, ovvero diviso in capitoli.
 
 Cioè lo script crea un unico pdf che, grazie a LaTex, è diviso in capitoli (con dei collegamenti cliccabili) che corrispondono ai singoli pdf iniziali.
 Cosi' si ha tutto in un solo file ordinato e si evita di dover balzare tra troppi file diversi.
@@ -40,6 +40,6 @@ per eseguire lo script.
 
 ###  Risultato
 
-![risultato](s1.png)
-![risultato](s2.png)
-![risultato](s3.png)
+![risultato](imgs/s1.png)
+![risultato](imgs/s2.png)
+![risultato](imgs/s3.png)

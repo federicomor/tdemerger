@@ -1,6 +1,6 @@
 # Description
 
-Script that merges exams/lecture notes/exercises in a single and indexed pdf.
+Script that merges exams/lecture notes/exercises in a single and indexed pdf, which means that is divided into chapters.
 
 That is, the script creates a single pdf which, thanks to LaTex, is divided into chapters (with clickable links) which correspond to the individual initial pdfs.
 So you have everything in one sorted file and avoid having to jump between too many different files.
@@ -40,9 +40,9 @@ to run the script.
 
 ### Result
 
-![result](s1.png)
+![result](imgs/s1.png)
 Text: various pdfs of exams, downloaded from Beep.
-![result](s2.png)
+![result](imgs/s2.png)
 Text: exectution of the script.
-![result](s3.png)
+![result](imgs/s3.png)
 Text: each pdf file has now become a chapter of a unique pdf.
