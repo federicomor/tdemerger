@@ -16,10 +16,6 @@ Una volta lanciato, lo script vi chiederà:
 
 Aver installato pdflatex (cioè aver installato TexStudio o un programma simile sul vostro pc).
 
-### Consigli per Powershell
-
-Provate a schiacciare Tab mentre digitate, vi autocompleterà le parole. E per copiare/incollare cose serve Ctrl+Shift+C/V.
-
 ### Istruzioni
 
 1. Scaricare il file *tdemerger.ps1* e metterlo nella cartella in cui si trovano i pdf da unire.

@@ -16,10 +16,6 @@ Once launched, the script will ask you:
 
 Have installed pdflatex (i.e. have installed TexStudio or a similar software on your pc).
 
-### Tips for PowerShell
-
-Try hitting Tab as you type, it will auto-complete your words. And to copy/paste things use Ctrl+Shift+C/V.
-
 ### Instructions
 
 1. Download the file *tdemerger_en.ps1* and put it in the folder where there are the pdfs to be merged.
