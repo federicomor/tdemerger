@@ -1,4 +1,4 @@
-# Description
+# tdemerger
 
 Script that merges exams/lecture notes/exercises in a single and indexed pdf, which means that is divided into chapters.
 

@@ -1,4 +1,4 @@
-# Descrizione
+# tdemerger
 
 Script che unisce temi d'esame/dispense/esercitazioni in un unico pdf indicizzato, ovvero diviso in capitoli.
 
