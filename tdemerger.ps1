@@ -69,7 +69,13 @@ $pre = "\documentclass[a4paper,openany,12pt]{article}
 \usepackage[italian]{babel}
 \usepackage{hyperref}
 \usepackage{pdfpages}
-\newcommand{\addtde}[1]{\section{#1} \newpage \includepdf[pages=-,pagecommand={\thispagestyle{empty}}]{#1}}
+% Vecchio comando:
+% \newcommand{\addtde}[1]{\section{#1} \newpage \includepdf[pages=-,pagecommand={\thispagestyle{empty}}]{#1}}
+% Nuovo comando:
+\newcommand{\addtde}[1]{%
+\includepdf[pages=1,pagecommand=\section{#1}, offset=0 -3cm, scale=0.9]{#1}
+\includepdf[pages=2-,pagecommand={\thispagestyle{empty}}, scale=0.9]{#1}
+}
 \makeindex
 \begin{document}
 \pagestyle{empty}
