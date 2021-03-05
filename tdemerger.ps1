@@ -91,6 +91,7 @@ $pre | Add-Content tde.tex
 # Rimozione caratteri "scomodi" per latex, per sicurezza
 gci *.pdf | Rename-Item -NewName {$_.Name -replace '_+', ' '}
 gci *.pdf | Rename-Item -NewName {$_.Name -replace '-+', '-'}
+gci *.pdf | Rename-Item -NewName {$_.Name -replace "\'", ' '}
 gci *.pdf | Rename-Item -NewName {$_.Name -replace 'à', 'a'}
 gci *.pdf | Rename-Item -NewName {$_.Name -replace '(è|é)', 'e'}
 gci *.pdf | Rename-Item -NewName {$_.Name -replace 'ì', 'i'}
@@ -132,6 +133,7 @@ Write-Host "Sto compilando ..."
 
 # Prima compilazione
 pdflatex -quiet -file-line-error -halt-on-error tde.tex
+
 # Seconda compilazione
 pdflatex -quiet -file-line-error -halt-on-error tde.tex
 # Doppia compilazione perche' serve per creare i collegamenti ai pdf
@@ -145,7 +147,6 @@ rm tde.log
 
 $fileout ="$name.tex"
 Rename-Item tde.tex -NewName $fileout
-
 
 $fileout ="$name.pdf"
 Rename-Item tde.pdf -NewName $fileout
