@@ -73,8 +73,8 @@ $pre = "\documentclass[a4paper,openany,12pt]{article}
 % \newcommand{\addtde}[1]{\section{#1} \newpage \includepdf[pages=-,pagecommand={\thispagestyle{empty}}]{#1}}
 % Nuovo comando:
 \newcommand{\addtde}[1]{%
-\includepdf[pages=1,pagecommand=\section{#1}, offset=0 -3cm, scale=0.9]{#1}
-\includepdf[pages=2-,pagecommand={\thispagestyle{empty}}, scale=0.9]{#1}
+\includepdf[pages=1,pagecommand=\section{#1} \thispagestyle{empty}, offset=0 -1.5cm, scale=1]{#1}
+\includepdf[pages=2-,pagecommand={\thispagestyle{empty}}]{#1}
 }
 \makeindex
 \begin{document}
