@@ -7,8 +7,8 @@ So you have everything in one sorted file and avoid having to jump between too m
 The pdfs may already be present in the folder where you leave the script, otherwise you can also provide the link of the site where they are located and the script will try to download them by itself.
 
 Once launched, the script will ask you:
-1. file name
-2. file title
+1. file name (don't use acccents)
+2. file title (don't use acccents)
 3. if the pdfs are already in the current folder or if you want to download them from the internet; in the second case it will ask you for a url, the link of the site where they are located
 4. if you want to include all pdfs or select "by hand" which ones to include and which not
 
