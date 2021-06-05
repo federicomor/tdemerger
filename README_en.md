@@ -32,7 +32,11 @@ Otherwise, select the folder in which you want to launch the script, then right-
 ```
 Powershell.exe -executionpolicy remotesigned -File .\tdemerger.ps1
 ```
-to run the script.
+to run the script. Or
+```
+Powershell.exe -executionpolicy remotesigned -File C:\path\to\the\file\tdemerger.ps1
+```
+if it's not in the same folder of the tdes.
 
 ### Result
 
