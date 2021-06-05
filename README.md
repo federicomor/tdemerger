@@ -4,7 +4,7 @@ Script che unisce temi d'esame/dispense/esercitazioni in un unico pdf indicizzat
 
 Cioè lo script crea un unico pdf che, grazie a LaTex, è diviso in capitoli (con dei collegamenti cliccabili) che corrispondono ai singoli pdf iniziali.
 Cosi' si ha tutto in un solo file ordinato e si evita di dover balzare tra troppi file diversi.
-I pdf possono essere già presenti nella cartella in cui si lacia lo script, altrimenti si può anche fornire il link del sito in cui si trovano e lo script proverà a scaricarli da solo.
+I pdf possono essere già presenti nella cartella in cui si lancia lo script, altrimenti si può anche fornire il link del sito in cui si trovano e lo script proverà a scaricarli da solo.
 
 Una volta lanciato, lo script vi chiederà:
 1. nome del file
