@@ -69,13 +69,16 @@ $pre = "\documentclass[a4paper,openany,12pt]{article}
 \usepackage[italian]{babel}
 \usepackage{hyperref}
 \usepackage{pdfpages}
-% Vecchio comando:
-% \newcommand{\addtde}[1]{\section{#1} \newpage \includepdf[pages=-,pagecommand={\thispagestyle{empty}}]{#1}}
-% Nuovo comando:
+
+%comando definitivo :)
 \newcommand{\addtde}[1]{%
-\includepdf[pages=1,pagecommand=\section{#1} \thispagestyle{empty}, scale=1]{#1}
-\includepdf[pages=2-,pagecommand={\thispagestyle{empty}}]{#1}
+	\pdfximage{#1} %prepara il pdf per il conteggio delle pagine
+	\ifthenelse{\the\pdflastximagepages > 1 }% caso con più di 1 pagina:
+		{\includepdf[pages=1,pagecommand=\section{#1} \thispagestyle{empty}, scale=0.9]{#1}
+		\includepdf[pages=2-,pagecommand={\thispagestyle{empty}}]{#1}}% caso con solo una pagina:
+		{\includepdf[pages=1,pagecommand=\section{#1} \thispagestyle{empty}, scale=0.9]{#1}}
 }
+
 \makeindex
 \begin{document}
 \pagestyle{empty}
