@@ -74,9 +74,9 @@ $pre = "\documentclass[a4paper,openany,12pt]{article}
 \newcommand{\addtde}[1]{%
 	\pdfximage{#1} %prepara il pdf per il conteggio delle pagine
 	\ifthenelse{\the\pdflastximagepages > 1 }% caso con più di 1 pagina:
-		{\includepdf[pages=1,pagecommand=\section{#1} \thispagestyle{empty}, scale=0.9]{#1}
+		{\includepdf[pages=1,pagecommand=\section{#1} \thispagestyle{empty}, scale=0.9, offset=0 -1.2cm]{#1}
 		\includepdf[pages=2-,pagecommand={\thispagestyle{empty}}]{#1}}% caso con solo una pagina:
-		{\includepdf[pages=1,pagecommand=\section{#1} \thispagestyle{empty}, scale=0.9]{#1}}
+		{\includepdf[pages=1,pagecommand=\section{#1} \thispagestyle{empty}, scale=0.9, offset=0 -1.2cm]{#1}}
 }
 
 \makeindex
@@ -136,7 +136,7 @@ Write-Host "Sto compilando ..."
 
 # Prima compilazione
 pdflatex -quiet -file-line-error -halt-on-error tde.tex
-
+Write-Host "Ci siamo quasi ..."
 # Seconda compilazione
 pdflatex -quiet -file-line-error -halt-on-error tde.tex
 # Doppia compilazione perche' serve per creare i collegamenti ai pdf
