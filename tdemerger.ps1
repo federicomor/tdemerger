@@ -69,6 +69,7 @@ $pre = "\documentclass[a4paper,openany,12pt]{article}
 \usepackage[italian]{babel}
 \usepackage{hyperref}
 \usepackage{pdfpages}
+\usepackage{geometry}
 
 %comando definitivo :)
 \newcommand{\addtde}[1]{%
@@ -87,7 +88,8 @@ $pre = "\documentclass[a4paper,openany,12pt]{article}
 \end{center}
 \newpage
 \tableofcontents
-\newpage"
+\newpage
+\newgeometry{lmargin=1cm,rmargin=1cm,tmargin=1cm,bmargin=1cm}"
 
 $pre | Add-Content tde.tex
 
