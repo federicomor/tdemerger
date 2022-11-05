@@ -105,6 +105,7 @@ gci *.pdf | Rename-Item -NewName {$_.Name -replace 'ù', 'u'}
 gci *.pdf | Rename-Item -NewName {$_.Name -replace '%+', ' '}
 gci *.pdf | Rename-Item -NewName {$_.Name -replace '\++', ' '}
 gci *.pdf | Rename-Item -NewName {$_.Name -replace ' +', ' '}
+gci *.pdf | Rename-Item -NewName {$_.Name -replace ',+', ''}
 
 Write-Host ""
 $risp = Read-Host -Prompt "Vuoi includere nel file $name.pdf tutti i pdf che ora hai in questa cartella, o vuoi selezionare a mano quali includere? (tutti/t/mano/m) "
