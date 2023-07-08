@@ -1,3 +1,5 @@
+**Update**: vedere anche https://github.com/federicomor/merge-pdf-with-toc che fa la stessa cosa ma senza richiedere di avere installata una distribuzione latex, ma utilizza solo comandi bash (dal terminale linux quindi).
+
 # tdemerger
 
 Script che unisce temi d'esame/dispense/esercitazioni in un unico pdf indicizzato, ovvero diviso in capitoli.
